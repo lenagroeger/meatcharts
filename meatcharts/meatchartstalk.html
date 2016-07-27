@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Meat Charts: Visualizing Data with the Human Form</title>
+  <meta name="viewport" content="width=device-width">
+
+<style>
+html,body {
+  margin: 30px auto;
+  max-width: 1200px;
+  font-family: Helvetica, serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+</style>
+</head>
+
+
+
+  <body>
+
+
+<h3>Meat Charts Talk</h3>
+<p>Hi everyone, I’m Lena Groeger, a developer/designer/journalist at ProPublica. Last year I worked with my colleagues Michael Grabell and Howard Berkes of NPR on a project about insurance. It sounds boring, but it turned out to be one of our most popular data visualizations ever. </p>
+<p>I’m going to tell you about 5 things I learned in the process.</p>
+<p>The investigation was about workers compensation. In the US, workers get money if are injured on the job, but the system has been slowly destroyed over the last few decades, which we wrote a big long story about.</p>
+<p>A bizarre aspect to this horrible situation is that for workers who suffer a serious injury, the difference between being ok and total disaster depends almost entirely on where you live. Your arm, for example, could be worth $50,000 in one state, and $500,000 in another. There are basically no federal standards to how much money you get for injured limbs.</p>
+<p>We wanted to visualize this absurd discrepancy.</p>
+<h3>1. Inspiration comes from strange places</h3>
+<p>So, here we go. </p>
+<p>To begin, this was what our data looked like. Each state has a “schedule of benefits”, which is basically a big list of body parts and how much money you’d get for them: arms, legs, hands, big toe, etc. </p>
+<p>Some of these state laws are just embarrassingly out of date – for example Connecticut’s law still has a provision for “incurable imbecility”, which may have meant something in 1910 but is now just offensive. This what we were dealing with. </p>
+<p>So while we were calling each state and collecting all of these schedule of benefits, someone mentioned that these body part lists reminded them of the famous “Angus Beef Chart” that you might see at a butcher shop. Right, you’ve seen these, in one form or another.</p>
+<p>We thought, aha! What if we turned our data into a literal human beef chart? What could go wrong?</p>
+
+<h3>2. Techniques come from even stranger places</h3>
+<p>But now the technical challenge. I needed a way to programmatically size each of 17 different body parts for all 50 states. So I was trying to think of other techniques out there for resizing weird but recognizable shapes.</p>
+<p>Well, a cartogram does this. In the same way that a cartogram distorts geography according to data, I could just distort limbs based on dollar figures. </p>
+<p>Turns out Mike Bostock had already built a cartogram that resizes each state but keeps it anchored to its center. Surely this would work if I just swap out states with limbs. </p>
+<p>But I also needed to be able to adjust all the little feet and arms and hands, so I used this force-directed network of states, and just applied it to my little limb person. </p>
+<h3>3. Human forms are creepy</h3>
+<p>But then things got tricky. </p>
+<p>For my early experiments I used a cartoony person. </p>
+<p>But when I swapped out a proportional human figure…</p>
+<p>…. things got nightmarish and horror-film-worthy very quickly. </p>
+<p>I should’ve probably guessed since the only other example I’ve seen is the homunculus man appears in your biology textbook. this is what your body looks like to your brain. </p>
+<p>Ok so, back to the cartoon. I went through a bunch of versions of this little figure, each time making it slightly more realistic. </p>
+<p>It was at this point that I sent a few screenshots to Alberto Cairo, just for for fun. Here’s what he had to say about this. We decided to keep going anyways, without his blessing, at our own peril. (It’s ok, he gave me permission to use this email, he has now praised the graphic).</p>
+<p>This was the form we settled on, also a bit more gender-neutral.</p>
+<p>But then we got to another wrinkle. After hands, feet, thumb, etc we also had data for EYES. </p>
+<p>Eyes, it turns out…. are terrifying. </p>
+<p>This doesn’t get better when I add the rest of the body</p>
+<p>Or make the eyes outlined. Or especially put a bunch of them together. </p>
+<p>So, we went back to the original, and decided to include eyes as symbols. </p>
+<p>This was a fortuitous choice, because at the last minute we also decided to add in data on testicles, and thus avoided a whole other conundrum. </p>
+<h3>
+4. Tell the story in multiple ways</h3>
+<p>We ended up telling this story a number of ways. To show how states compared to each other, we used a small multiples comparison across all states. But to show how a specific state compared to the national average, we let you click to see a side-by-side view.</p>
+<p>We also made an animated gif to share on social media, and did super well.</p>
+<h3>5. Even sad stories can be funny</h3>
+<p>Now, this story was tragic. That’s nothing really new at ProPublica, as one reader pointed out to us in 2010.</p>
+<p>But that doesn’t mean that all aspects of all our stories needs to be sad. Or, even if WE stay gloomy, it doesn’t mean other news outlets won’t find the humor. Gawker came up with this incredible headline all by themselves. </p>
+<p>Another funny story: a few weeks after the project was over, I ran into this poster in a sea-faring/pirate themed bar. </p>
+<p>Once again, inspiration is everywhere. </p>
+<p>Thanks!</p>
+
+
+</body>
+</html>

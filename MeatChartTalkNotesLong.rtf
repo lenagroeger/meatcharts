@@ -1,0 +1,120 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww15420\viewh16500\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs26 \cf0 Meat Charts Talk
+\b0 \
+\
+Hi everyone, I\'92m Lena Groeger, a developer/designer/journalist at ProPublica. Last year I worked with my colleagues Michael Grabell and Howard Berkes of NPR on a project about insurance. It sounds boring, but it turned into one of our most popular data visualizations ever. \
+\
+I\'92m going to tell you about 5 things I learned in the process.\
+\
+The investigation was about workers compensation. In the US, workers get money if are injured on the job, but the agreement between labor and industry that has been slowly dismantled in the last few decades. Today for thousands of workers, a serious injury can lead to total disaster, which we wrote a big long story about.\
+\
+A bizarre aspect to this generally horrible situation is that it totally depends on what state you live in \'96\'a0especially when it comes to how much money you get for your injured limbs. Your arm, for example, could be worth $50,000 in one state, and $500,000 in another. There are basically no federal standards.\
+\
+We wanted to visualize this data \'96\'a0to show people this absurd discrepancy in workers comp benefits. \
+\
+
+\b 1. Inspiration comes from strange places\
+
+\b0 \
+So, here we go. \
+\
+To begin, this was what our data looked like. Each state has what\'92s called a \'93schedule of benefits\'94, where they lay out what a worker would get for a lost foot, hand, eye, ear. \
+\
+Here\'92s a closeup of New Jersey\'92s. \
+\
+Some of these state laws are just hopelessly and embarrassingly out of date \'96 for example Connecticut\'92s law still has a provision for \'93incurable imbecility\'94, which may have meant something in 1910 but is now both outdated and offensive. But, this what we were dealing with. Every state has a different one of these, which meant we spent a lot of time calling up government officials and asking them for this data.\
+\
+One of them said something that triggered the first inkling of an idea. They told us that these lists of money per body part reminded them of the famous \'93Angus Beef Chart\'94 that you might see at a butcher shop. Right, you\'92ve seen these, in one form or another.\
+\
+So, we thought, huh, what if we turned this data into a 
+\i human
+\i0  beef chart? People always talk about the \'93human factor\'94 in stories right? Let\'92s put the 
+\i human
+\i0  in human factor! Let\'92s take advantage of a dataset on body parts and make a visualization of body parts! What could go wrong.\
+\
+
+\b 2. Techniques come from even stranger places
+\b0 \
+\
+But now the technical challenge. I needed a way to programmatically size each of 17 different body parts for all 50 states. So I thought\'85 what other visualization form is based on resizing weird but recognizable shapes?\
+\
+Well, a cartogram! In the same way that a cartogram distorts geography according to data, I could just distort limbs based on dollar figures, and size them based on how much bigger or smaller they were to the national average.\
+\
+Turns out Mike Bostock had already built a cartogram that resizes each state but keeps it anchored to their middle. This, I thought, I could work with. Just swap out states with limbs. \
+\
+Here an early screenshot of my experimenting with this idea.\
+\
+And another one. \
+\
+But I also needed to be able to adjust and move around the feet and arms and hands once I resized them. Luckily, I found this force-directed network of states that I thought might be able to help.\
+\
+Once I got my state version working\'85\
+\
+I applied it to my little limb person also. \
+\
+
+\b 3. Human forms are creepy
+\b0 \
+\
+But then things got tricky. \
+\
+For my early experiments I used a cartoony person, with the thought that we\'92d get more realistic later. \
+\
+But when I swapped out a proportional human figure\'85\
+\
+\'85. things got nightmarish and horror-film-worthy very quickly. \
+\
+This problem is not solved, as I thought, with just rounding out the corners of each body part. \
+\
+Ok so, back to the cartoon. I went through a bunch of versions of this little figure, each time making it slightly more realistic. \
+\
+It was at this point that I sent a few screenshots to Alberto Cairo, just for for fun. Here\'92s what he had to say about this. We decided to keep going anyways, without his blessing, at our own risk. (It\'92s ok, he let me use this email).\
+\
+This was the form we settled on. I tried really hard to make it as gender neutral as possible, because while people might have recognized a man in a hard hat, women get injured on the job too. It was important for us not to ignore that.\
+\
+But then we got to another wrinkle. After hands, feet, thumb, etc we also had data for EYES. \
+\
+Eyes, it turns out\'85. are terrifying. \
+\
+This doesn\'92t get better when I add the rest of the body\
+\
+Or make the eyes outlined. Or especially put a bunch of them together. \
+\
+So, we went back to the original, and decided to include eyes as symbols. \
+\
+This was a fortuitous choice, because at the last minute we also decided to add in data on testicles, and thus avoided a whole other conundrum. \
+\
+\
+
+\b 4. Take advantage of different forms.\
+
+\b0 \
+We ended up telling this story a number of ways. To show how states compared to each other, we used a small multiples comparison across all states. But to show how a specific state compared to the average, we let you click to see a side-by-side comparison.\
+\
+We also made an animated gif for to share on social media.\
+\
+
+\b 5. Even sad stories have funny elements
+\b0 \
+\
+Now, this story was tragic. That\'92s nothing really new at ProPublica, as one reader pointed out to us in 2010.\
+\
+But that doesn\'92t mean that all aspects to all our reporting needs to be sad. Or, even if WE stay gloomy, it doesn\'92t mean other news outlets won\'92t find the humor. Gawker came up with this headline all by themselves. \
+\
+Another funny story: a few weeks after the project was over, I ran into this poster in a sea-faring/pirate themed bar. \
+\
+Once again, inspiration is everywhere. \
+\
+Thanks!\
+\
+\
+\
+\
+\
+\
+}

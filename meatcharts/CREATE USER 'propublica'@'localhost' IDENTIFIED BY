@@ -1,0 +1,4 @@
+CREATE USER 'propublica'@'localhost' IDENTIFIED BY 'election';
+GRANT ALL PRIVILEGES ON *.* TO 'propublica'@'localhost';
+CREATE DATABASE congress;
+mysql -u propublica -p < congress-2.sql;
